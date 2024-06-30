@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(34, 37, 42);
+    font-family: Arial, sans-serif;
+    box-shadow: 90px -90px 500px 250px rgba(14, 14, 16, 0.831) inset;
+}
+
+.player {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover;
+    background-color: #fff;
+
+    .player__shadow {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 100;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player__controls {
+        padding: 0 15px;
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        background-color: rgba(14, 14, 16, 0.71);
+        backdrop-filter: blur(7px);    
+
+        button {
+            width: 54px;
+            height: 54px;
+            border: 0;
+            background-color: transparent;
+            outline: 0;
+
+            img {
+                width: 54px;
+                height: 54px;
+            }
+        }
+    }
+
+    .setting__controls {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .video__time {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            color: #FFF;
+            user-select: none;
+        }
+    }
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    max-width: 1300px;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.385);
+
+    .progress__filled {
+        width: 0%;
+        height: 6px;
+        border-radius: 8px;
+        background-color: #FFC83D;
+    }
+
+    .range {
+        width: 16px;
+        height: 16px;
+        background-color: #FFC83D;
+        border-radius: 50%;
+    }
+}
